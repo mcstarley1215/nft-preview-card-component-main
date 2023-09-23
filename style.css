@@ -39,6 +39,25 @@ body {
   margin: 1.5rem;
 }
 
+.image-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  background-color: hsl(178, 100%, 50%, 0.6);
+  padding: 7.8rem;
+  border-radius: 10px;
+  top: 1.5rem;
+  left: 1.5rem;
+  opacity: 0;
+}
+
+.image-container:active .overlay {
+  opacity: 1;
+}
+
 .detail {
   display: flex;
   flex-direction: column;
@@ -51,6 +70,11 @@ body {
 .detail-title {
   color: hsl(0, 0%, 100%);
   margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.detail-title:active {
+  color: hsl(178, 100%, 50%);
 }
 
 .detail-description {
@@ -102,6 +126,11 @@ body {
 
 .author-name {
   color: white;
+  cursor: pointer;
+}
+
+.author-name:active {
+  color: hsl(178, 100%, 50%);
 }
 
 hr {
